@@ -63,7 +63,7 @@ class Dragon(pygame.sprite.Sprite):
         :return: None
         """
         for event in pygame.event.get(eventtype=pygame.KEYDOWN):
-            if event.key == pygame.K_SPACE:
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                 fireball_group.add(Fireball(self.x_pos, self.y_pos))
 
         keys = pygame.key.get_pressed()
